@@ -76,18 +76,69 @@ h2 {
   justify-content: center;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .letterboard {
     border-style: solid;
     height: 10%;
     width: 75%;
     margin: 10px;
     align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+}
+.tiles {
+    display: flex;
+}
+
+.bottomarea {
+    border-style: solid;
+    height: 15%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    height: 30px;
+    width: 30px;
+    border-style: solid;
+    border-width: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input {
+    height:30px;
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+    border-style: solid;
+}
+
+.newflex{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: 70%;
 }
 
 .guessedletters {
-    border-style: solid;
-    height: 10%;
-    width: 50%;
-    align-self: center;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+input[type=submit] {
+    width: 100px;
+    margin: 0px;
 }

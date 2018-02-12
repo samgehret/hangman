@@ -12,19 +12,28 @@
 
     <div class = 'flex'>
         <div class = 'hangmanboard'>
-            <div class= 'head'>Head</div>
-            <div class= 'body'>Body</div>
-            <div class = 'leftarm'>Left Arm</div>
-            <div class = 'rightarm'>Right Arm</div>
-            <div class = 'leftleg'>Left Leg</div>
-            <div class = 'rightleg'>Right Leg</div>
+            <div class= 'head index1 hidden'>Head</div>
+            <div class= 'body index2 hidden'>Body</div>
+            <div class = 'leftarm index3 hidden'>Left Arm</div>
+            <div class = 'rightarm index4 hidden'>Right Arm</div>
+            <div class = 'leftleg index5 hidden'>Left Leg</div>
+            <div class = 'rightleg index6 hidden'>Right Leg</div>
         </div>
         <div class = 'letterboard'>
-        <h2>This is where word will be placed</h2>
+            <!-- <h2>This is where word will be placed</h2> -->
+            <div class = 'tiles'></div>
         </div>
-        <div class = 'guessedletters'>
-            <h2>This is where the guessed letters will go</h2>
-         </div>
+        <div class = 'newflex'>
+            <div class = 'bottomarea'>
+                <div class = 'guessedletters'>
+                    
+                </div>
+                
+            </div>
+            <form><input type="text" name="letterguess" maxlength="1" id='form'></form> 
+            <input type="submit" id = 'submit'>
+        </div>
+         
 
     </div>
     <script src="hangman.js"></script>
