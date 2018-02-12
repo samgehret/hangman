@@ -1,0 +1,31 @@
+Hangman!
+
+HTML
+-Form to capture game word
+-Form to capture letter guess
+-Create shapes for each incorrect guess
+    -Head
+    -Body
+    -Left/Right Leg
+    -Left/Right Leg
+
+CSS
+-Need hidden class to put on HangMan shapes
+-Hidden by default
+
+Javascript
+-Display Form to capture word from player 1
+-Store entered word into variable
+
+-put each letter of word into an array
+-count the length of the array and display that many blank spots on the screen
+
+-A Guess Letter Function
+    -compares input to each spot in the Array with Word in it.
+    -if match, display letter on the board, and continue to go through the array.
+    -if no match put part of the hangman on the board.
+
+
+Error Handling:
+-Make sure input is a valid letter
+-Make sure letter has not already been guessed
