@@ -10,6 +10,8 @@ var tileBoard = document.querySelector('.tiles')
 var guessedSection = document.querySelector('.guessedletters')
 var guessedWrongArray = []
 var guessedRightArray = []
+var startGameButton = document.getElementById('newgame')
+var captureWord = document.getElementById('newword')
 
 function startNewGame () {
   // clear the current game board
@@ -29,7 +31,7 @@ function startNewGame () {
   }
 
   // capture the word to be guessed in a prompt
-  wordArray = prompt('please enter the secret word').toLowerCase().split('')
+  wordArray = captureWord.value.split('')
   for (var i = 0; i < wordArray.length; i++) {
     guessedWrongArray = []
     guessedRightArray = []
@@ -98,4 +100,8 @@ form.addEventListener('keypress', (e) => {
   if (e.keyCode === 13) {
     checkLetter()
   }
+})
+
+startGameButton.addEventListener('click', (e) => {
+  startNewGame()
 })

@@ -9,7 +9,10 @@
 </head>
 <body>
     <h1>Sam's Hangman</h1>
-
+    <div class = 'newgame'>
+        <input type="text" maxlength="10" id='newword'>
+        <input type="button" id = 'newgame' value = 'New Game'>
+    </div>
     <div class = 'flex'>
         <div class = 'hangmanboard'>
             <div class= 'head index1 hidden'>Head</div>
@@ -34,7 +37,7 @@
                 
             </div>
             <div class = 'submission'>
-                <input type="text" name="letterguess" maxlength="1" id='form'>
+                <input type="text" maxlength="1" id='form'>
                 <input type="button" id = 'submit' value = 'Guess Letter'>
             </div>
         </div>
