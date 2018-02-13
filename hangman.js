@@ -12,6 +12,7 @@ var guessedWrongArray = []
 var guessedRightArray = []
 var startGameButton = document.getElementById('newgame')
 var captureWord = document.getElementById('newword')
+var endMessage = document.querySelector('.endmessage')
 
 function startNewGame () {
   // clear the current game board
@@ -29,6 +30,9 @@ function startNewGame () {
     hangMan[k].classList.add('hidden')
   }
 
+  while (endMessage.hasChildNodes()) {
+    endMessage.removeChild(endMessage.firstChild)
+  }
   // capture the word to be guessed in an input
   wordArray = captureWord.value.split('')
   captureWord.value = ''
@@ -61,8 +65,12 @@ function checkLetter () {
       // was guessed.
       guessedRightArray[i] = form.value
       if (guessedRightArray.toString() === wordArray.toString()) {
-        alert('you win!!!!')
-        startNewGame()
+        // alert('you win!!!!')
+        // startNewGame()
+        var winMessage = document.createElement('h2')
+        winMessage.className = 'winning'
+        winMessage.innerHTML = 'You Win!!'
+        document.querySelector('.endmessage').appendChild(winMessage)
       }
     }
   }
