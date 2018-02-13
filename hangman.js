@@ -6,7 +6,6 @@
 var wordArray = prompt('please enter the secret word').toLowerCase().split('')
 var submit = document.getElementById('submit')
 var form = document.getElementById('form')
-
 var guessedWrongArray = []
 var guessedRightArray = []
 
@@ -51,7 +50,6 @@ function checkLetter () {
     box.innerHTML = form.value
     guessedLetters.appendChild(box)
     guessedWrongArray.push(form.value)
-    console.log(guessedWrongArray.length)
     var indexSelector = document.querySelector(`.index${guessedWrongArray.length}`)
     indexSelector.classList.remove('hidden')
     form.value = ''
@@ -60,6 +58,7 @@ function checkLetter () {
       alert('you lose')
     }
   }
+  //clear input box after a guess is made
   form.value = ''
 }
 
