@@ -3,7 +3,6 @@
 } */
 
 h1{
-    background-color: red;
     text-align: center;
 }
 h2 {
@@ -150,7 +149,7 @@ input {
     align-items: center;
 }
 
-input[type=submit] {
+input[type=button] {
     width: 100px;
     margin: 0px;
 }
