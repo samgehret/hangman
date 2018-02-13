@@ -26,12 +26,12 @@ function startNewGame () {
 
   var hangMan = document.querySelector('.hangmanboard').children
   for (var k = 0; k < hangMan.length; k++) {
-    console.log('entering hangman function')
     hangMan[k].classList.add('hidden')
   }
 
-  // capture the word to be guessed in a prompt
+  // capture the word to be guessed in an input
   wordArray = captureWord.value.split('')
+  captureWord.value = ''
   for (var i = 0; i < wordArray.length; i++) {
     guessedWrongArray = []
     guessedRightArray = []
@@ -104,4 +104,10 @@ form.addEventListener('keypress', (e) => {
 
 startGameButton.addEventListener('click', (e) => {
   startNewGame()
+})
+
+captureWord.addEventListener('keypress', (e) => {
+  if (e.keyCode === 13) {
+    startNewGame()
+  }
 })
