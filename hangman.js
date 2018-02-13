@@ -14,10 +14,7 @@ var startGameButton = document.getElementById('newgame')
 var captureWord = document.getElementById('newword')
 var endMessage = document.querySelector('.endmessage')
 
-function startNewGame () {
-  // clear the current game board
-  // Used W3 schools to help with this
-  // https://www.w3schools.com/jsref/met_node_removechild.asp
+function clearBoard () {
   while (tileBoard.hasChildNodes()) {
     tileBoard.removeChild(tileBoard.firstChild)
   }
@@ -33,6 +30,16 @@ function startNewGame () {
   while (endMessage.hasChildNodes()) {
     endMessage.removeChild(endMessage.firstChild)
   }
+}
+
+function startNewGame () {
+  if (!captureWord.value) {
+    alert('please enter a word')
+  }
+  // clear the current game board
+  // Used W3 schools to help with this
+  // https://www.w3schools.com/jsref/met_node_removechild.asp
+  clearBoard()
   // capture the word to be guessed in an input
   wordArray = captureWord.value.split('')
   captureWord.value = ''
@@ -95,8 +102,6 @@ function checkLetter () {
   // clear input box after a guess is made
   form.value = ''
 }
-
-startNewGame()
 
 // event listener on the submit button
 submit.addEventListener('click', (e) => {
