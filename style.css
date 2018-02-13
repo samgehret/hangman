@@ -170,3 +170,8 @@ input[type=button] {
     text-align: center;
     background: green;
 }
+
+.losing {
+    text-align: center;
+    background: red;
+}

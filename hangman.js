@@ -65,8 +65,6 @@ function checkLetter () {
       // was guessed.
       guessedRightArray[i] = form.value
       if (guessedRightArray.toString() === wordArray.toString()) {
-        // alert('you win!!!!')
-        // startNewGame()
         var winMessage = document.createElement('h2')
         winMessage.className = 'winning'
         winMessage.innerHTML = 'You Win!!'
@@ -88,8 +86,10 @@ function checkLetter () {
     form.value = ''
     // console.log(`.index${guessedWrongArray.length}`)
     if (guessedWrongArray.length === 6) {
-      alert('you lose')
-      startNewGame()
+      winMessage = document.createElement('h2')
+      winMessage.className = 'losing'
+      winMessage.innerHTML = 'You Lose!!'
+      document.querySelector('.endmessage').appendChild(winMessage)
     }
   }
   // clear input box after a guess is made
