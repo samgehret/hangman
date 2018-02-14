@@ -74,7 +74,7 @@ function startNewGame () {
 function checkWin () {
   if (guessedRightArray.toString() === wordArray.toString()) {
     winMessage.className = 'winning'
-    winMessage.innerHTML = 'You Win!!'
+    winMessage.innerHTML = 'You Win!! Start a new game above'
     document.querySelector('.endmessage').appendChild(winMessage)
   }
 }
@@ -82,7 +82,7 @@ function checkWin () {
 function checkLoss () {
   if (guessedWrongArray.length === 6) {
     winMessage.className = 'losing'
-    winMessage.innerHTML = 'You Lose!!'
+    winMessage.innerHTML = 'You Lose!! Start a new game above'
     document.querySelector('.endmessage').appendChild(winMessage)
   }
 }
