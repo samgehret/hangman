@@ -31,8 +31,14 @@ ul {
 
 .boardwins {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 40%;
+}
+
+.scorebox {
+    border: solid white;
+    width: 150px;
+    height: 150px;
 }
 
 .hangmanboard {
