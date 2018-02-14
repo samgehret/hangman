@@ -13,6 +13,7 @@ var guessedRightArray = []
 var startGameButton = document.getElementById('newgame')
 var captureWord = document.getElementById('newword')
 var endMessage = document.querySelector('.endmessage')
+var winMessage = document.createElement('h2')
 
 function clearBoard () {
   while (tileBoard.hasChildNodes()) {
@@ -40,6 +41,22 @@ function checkInput () {
   }
 }
 
+function setBoard () {
+  wordArray = captureWord.value.split('')
+  captureWord.value = ''
+  for (var i = 0; i < wordArray.length; i++) {
+    guessedWrongArray = []
+    guessedRightArray = []
+    var box = document.createElement('div')
+    box.className = `box box${i}`
+    var letterBoard = document.querySelector('.tiles')
+    letterBoard.appendChild(box)
+  }
+  for (var j = 0; j < wordArray.length; j++) {
+    guessedRightArray.push('')
+  }
+}
+
 function startNewGame () {
   if (checkInput()) {
   // clear the current game board
@@ -47,20 +64,8 @@ function startNewGame () {
   // https://www.w3schools.com/jsref/met_node_removechild.asp
     clearBoard()
   // capture the word to be guessed in an input
-    wordArray = captureWord.value.split('')
-    captureWord.value = ''
-    for (var i = 0; i < wordArray.length; i++) {
-      guessedWrongArray = []
-      guessedRightArray = []
-      var box = document.createElement('div')
-      box.className = `box box${i}`
-      var letterBoard = document.querySelector('.tiles')
-      letterBoard.appendChild(box)
-    }
+    setBoard()
   // create an array with empty spots for the same length as the input word
-    for (var j = 0; j < wordArray.length; j++) {
-      guessedRightArray.push('')
-    }
   }
 }
 
@@ -79,7 +84,6 @@ function checkLetter () {
       // was guessed.
       guessedRightArray[i] = form.value
       if (guessedRightArray.toString() === wordArray.toString()) {
-        var winMessage = document.createElement('h2')
         winMessage.className = 'winning'
         winMessage.innerHTML = 'You Win!!'
         document.querySelector('.endmessage').appendChild(winMessage)
@@ -101,7 +105,6 @@ function checkLetter () {
     form.value = ''
     // console.log(`.index${guessedWrongArray.length}`)
     if (guessedWrongArray.length === 6) {
-      winMessage = document.createElement('h2')
       winMessage.className = 'losing'
       winMessage.innerHTML = 'You Lose!!'
       document.querySelector('.endmessage').appendChild(winMessage)
