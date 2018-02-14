@@ -39,6 +39,7 @@ function checkInput () {
   if (!captureWord.value) {
     alert('please enter a word')
   } else {
+    document.querySelector('.startanewgame').classList.remove('blinking')
     return true
   }
 }
@@ -57,6 +58,7 @@ function setBoard () {
   for (var j = 0; j < wordArray.length; j++) {
     guessedRightArray.push('')
   }
+  document.querySelector('.submission').classList.add('blinking')
 }
 
 function startNewGame () {
@@ -76,14 +78,18 @@ function checkWin () {
     winMessage.className = 'winning'
     winMessage.innerHTML = 'You Win!! Start a new game above'
     document.querySelector('.endmessage').appendChild(winMessage)
+    document.querySelector('.submission').classList.remove('blinking')
+    document.querySelector('.startanewgame').classList.add('blinking')
   }
 }
 
 function checkLoss () {
   if (guessedWrongArray.length === 6) {
     winMessage.className = 'losing'
-    winMessage.innerHTML = 'You Lose!! Start a new game above'
+    winMessage.innerHTML = `You Lose! Answer is ${wordArray.join('')} Start a new game above`
     document.querySelector('.endmessage').appendChild(winMessage)
+    document.querySelector('.submission').classList.remove('blinking')
+    document.querySelector('.startanewgame').classList.add('blinking')
   }
 }
 

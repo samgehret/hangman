@@ -10,8 +10,10 @@
 <body>
     <h1>Sam's Hangman</h1>
     <div class = 'newgame'>
-        <input type="text" maxlength="10" id='newword'>
-        <input type="button" id = 'newgame' value = 'New Game'>
+        <div class = 'startanewgame blinking'>
+            <input type="text" maxlength="10" id='newword' placeholder = 'Enter your Word Here'>
+            <input type="button" id = 'newgame' value = 'New Game'>
+        </div>
     </div>
     <div class = 'endmessage'></div>
     <div class = 'flex'>

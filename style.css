@@ -130,7 +130,7 @@ h2 {
     width: 30px;
     font-size: 20px;
     text-align: center;
-    margin: 30px;
+    margin: 10px;
     border-style: solid;
 }
 
@@ -162,8 +162,9 @@ input[type=button] {
 
 .newgame {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
+    /* width: 40%; */
 }
 
 .winning {
@@ -175,3 +176,30 @@ input[type=button] {
     text-align: center;
     background: red;
 }
+
+#newword {
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.submission {
+    border: solid black;
+    margin: 10px;
+}
+
+.startanewgame {
+    padding: 10px;
+    border: dotted white;
+}
+
+/* Used this website to do the blinking animation
+http://www.multipetros.gr/posts/728-blink-elements-border-the-css-way/ */
+
+@keyframes blink { 
+    50% { border-color: #ff0000; } 
+ }
+ .blinking { /*or other element you want*/
+     animation: blink .5s step-end infinite alternate;
+ }
