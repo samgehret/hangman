@@ -14,6 +14,7 @@ var startGameButton = document.getElementById('newgame')
 var captureWord = document.getElementById('newword')
 var endMessage = document.querySelector('.endmessage')
 var winMessage = document.createElement('h2')
+var instructions = document.querySelector('.instructions')
 
 // Could I give all the HTML Elements for ClearBoard the same
 // CSS class to only call this loop once with querySelectorAll
@@ -33,6 +34,10 @@ function clearBoard () {
   while (endMessage.hasChildNodes()) {
     endMessage.removeChild(endMessage.firstChild)
   }
+  while (instructions.hasChildNodes()) {
+    instructions.removeChild(instructions.firstChild)
+  }
+
 }
 
 function checkInput () {
