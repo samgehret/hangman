@@ -10,6 +10,11 @@ h2 {
     font-size: 30px;
 }
 
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
 .instructions {
     display: flex;
     justify-content: center;
@@ -32,13 +37,13 @@ ul {
 .boardwins {
     display: flex;
     justify-content: space-between;
-    height: 40%;
+    height: 50%;
 }
 
 .scorebox {
     border: solid white;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
 }
 
 .hangmanboard {

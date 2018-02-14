@@ -15,6 +15,8 @@ var captureWord = document.getElementById('newword')
 var endMessage = document.querySelector('.endmessage')
 var winMessage = document.createElement('h2')
 var instructions = document.querySelector('.instructions')
+var winCount = 0
+var lossCount = 0
 
 // Could I give all the HTML Elements for ClearBoard the same
 // CSS class to only call this loop once with querySelectorAll
@@ -37,7 +39,6 @@ function clearBoard () {
   while (instructions.hasChildNodes()) {
     instructions.removeChild(instructions.firstChild)
   }
-
 }
 
 function checkInput () {
@@ -85,6 +86,8 @@ function checkWin () {
     document.querySelector('.endmessage').appendChild(winMessage)
     document.querySelector('.submission').classList.remove('blinking')
     document.querySelector('.startanewgame').classList.add('blinking')
+    winCount++
+    document.getElementById('wins').innerHTML = winCount
   }
 }
 
@@ -96,6 +99,8 @@ function checkLoss () {
     document.querySelector('.submission').classList.remove('blinking')
     document.querySelector('.startanewgame').classList.add('blinking')
     document.querySelector('.head').innerHTML = 'X  X'
+    lossCount++
+    document.getElementById('losses').innerHTML = lossCount
   }
 }
 
