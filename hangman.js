@@ -1,8 +1,4 @@
-// window.onbeforeunload = function () {
-//   return 'you can not refresh the page'
-// }
-
-// capture the word to be guessed
+// initialize global variables
 var wordArray = ''
 var submit = document.getElementById('submit')
 var form = document.getElementById('form')
