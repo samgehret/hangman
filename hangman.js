@@ -32,28 +32,35 @@ function clearBoard () {
   }
 }
 
-function startNewGame () {
+function checkInput () {
   if (!captureWord.value) {
     alert('please enter a word')
+  } else {
+    return true
   }
+}
+
+function startNewGame () {
+  if (checkInput()) {
   // clear the current game board
   // Used W3 schools to help with this
   // https://www.w3schools.com/jsref/met_node_removechild.asp
-  clearBoard()
+    clearBoard()
   // capture the word to be guessed in an input
-  wordArray = captureWord.value.split('')
-  captureWord.value = ''
-  for (var i = 0; i < wordArray.length; i++) {
-    guessedWrongArray = []
-    guessedRightArray = []
-    var box = document.createElement('div')
-    box.className = `box box${i}`
-    var letterBoard = document.querySelector('.tiles')
-    letterBoard.appendChild(box)
-  }
+    wordArray = captureWord.value.split('')
+    captureWord.value = ''
+    for (var i = 0; i < wordArray.length; i++) {
+      guessedWrongArray = []
+      guessedRightArray = []
+      var box = document.createElement('div')
+      box.className = `box box${i}`
+      var letterBoard = document.querySelector('.tiles')
+      letterBoard.appendChild(box)
+    }
   // create an array with empty spots for the same length as the input word
-  for (var j = 0; j < wordArray.length; j++) {
-    guessedRightArray.push('')
+    for (var j = 0; j < wordArray.length; j++) {
+      guessedRightArray.push('')
+    }
   }
 }
 
@@ -79,6 +86,7 @@ function checkLetter () {
       }
     }
   }
+
   // if checker length = zero, it means no match was found.
   if (checker.length === 0) {
     // add a box for a wrong guess and put the incorrectly guessed letter inside
@@ -99,9 +107,9 @@ function checkLetter () {
       document.querySelector('.endmessage').appendChild(winMessage)
     }
   }
-  // clear input box after a guess is made
   form.value = ''
 }
+  // clear input box after a guess is made
 
 // event listener on the submit button
 submit.addEventListener('click', (e) => {
