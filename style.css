@@ -29,10 +29,16 @@ ul {
     margin: auto;
 }
 
+.boardwins {
+    display: flex;
+    justify-content: center;
+    height: 40%;
+}
+
 .hangmanboard {
     border-top: solid white;
     border-right: solid white;
-    height: 40%;
+    height: 80%;
     width: 35%;
     margin: 10px;
     align-self: center;
