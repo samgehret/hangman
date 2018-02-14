@@ -15,6 +15,8 @@ var captureWord = document.getElementById('newword')
 var endMessage = document.querySelector('.endmessage')
 var winMessage = document.createElement('h2')
 
+// Could I give all the HTML Elements for ClearBoard the same
+// CSS class to only call this loop once with querySelectorAll
 function clearBoard () {
   while (tileBoard.hasChildNodes()) {
     tileBoard.removeChild(tileBoard.firstChild)
@@ -69,6 +71,22 @@ function startNewGame () {
   }
 }
 
+function checkWin () {
+  if (guessedRightArray.toString() === wordArray.toString()) {
+    winMessage.className = 'winning'
+    winMessage.innerHTML = 'You Win!!'
+    document.querySelector('.endmessage').appendChild(winMessage)
+  }
+}
+
+function checkLoss () {
+  if (guessedWrongArray.length === 6) {
+    winMessage.className = 'losing'
+    winMessage.innerHTML = 'You Lose!!'
+    document.querySelector('.endmessage').appendChild(winMessage)
+  }
+}
+
 // define function to check the letter in the input box
 function checkLetter () {
   var checker = []
@@ -83,11 +101,7 @@ function checkLetter () {
       // below array. This is to keep track of which letter in the input word
       // was guessed.
       guessedRightArray[i] = form.value
-      if (guessedRightArray.toString() === wordArray.toString()) {
-        winMessage.className = 'winning'
-        winMessage.innerHTML = 'You Win!!'
-        document.querySelector('.endmessage').appendChild(winMessage)
-      }
+      checkWin()
     }
   }
 
@@ -103,12 +117,8 @@ function checkLetter () {
     var indexSelector = document.querySelector(`.index${guessedWrongArray.length}`)
     indexSelector.classList.remove('hidden')
     form.value = ''
+    checkLoss()
     // console.log(`.index${guessedWrongArray.length}`)
-    if (guessedWrongArray.length === 6) {
-      winMessage.className = 'losing'
-      winMessage.innerHTML = 'You Lose!!'
-      document.querySelector('.endmessage').appendChild(winMessage)
-    }
   }
   form.value = ''
 }
