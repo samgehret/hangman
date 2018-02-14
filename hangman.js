@@ -116,7 +116,6 @@ function checkLetter () {
     guessedWrongArray.push(form.value)
     var indexSelector = document.querySelector(`.index${guessedWrongArray.length}`)
     indexSelector.classList.remove('hidden')
-    form.value = ''
     checkLoss()
     // console.log(`.index${guessedWrongArray.length}`)
   }
