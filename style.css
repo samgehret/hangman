@@ -10,6 +10,16 @@ h2 {
     font-size: 30px;
 }
 
+.instructions {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin-top: 0px;
+}
+
+
 .flex {
     display: flex;
     flex-direction: column;
@@ -197,6 +207,10 @@ input[type=button] {
 .startanewgame {
     padding: 10px;
     border: dotted white;
+}
+
+p {
+    text-align: center;
 }
 
 /* Used this website to do the blinking animation
