@@ -90,6 +90,7 @@ function checkLoss () {
     document.querySelector('.endmessage').appendChild(winMessage)
     document.querySelector('.submission').classList.remove('blinking')
     document.querySelector('.startanewgame').classList.add('blinking')
+    document.querySelector('.head').innerHTML='X  X'
   }
 }
 

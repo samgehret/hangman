@@ -1,6 +1,7 @@
-/* body, html {
-    height: 100%;
-} */
+body {
+    background: black;
+    color: white;
+} 
 
 h1{
     text-align: center;
@@ -13,11 +14,12 @@ h2 {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    font-size: 35px;
 }
 
 .hangmanboard {
-    border-top: solid;
-    border-right: solid;
+    border-top: solid white;
+    border-right: solid white;
     height: 40%;
     width: 35%;
     margin: 10px;
@@ -35,7 +37,8 @@ h2 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border-style: solid;
+  border: solid white;
+  font-size: 20px;
 }
 
 .body {
@@ -44,7 +47,7 @@ h2 {
     display: flex;
   align-items: center;
   justify-content: center;
-  border-style: solid;
+  border: solid white;
 }
 
 .leftarm {
@@ -69,7 +72,7 @@ h2 {
     display: flex;
   align-items: center;
   justify-content: center;
-  border-right: solid black;
+  border-right: solid white;
 }
 
 .rightleg {
@@ -78,7 +81,7 @@ h2 {
     display: flex;
   align-items: center;
   justify-content: center;
-  border-left: solid black;
+  border-left: solid white;
 }
 
 .hidden {
@@ -86,7 +89,7 @@ h2 {
 }
 
 .letterboard {
-    border-style: solid;
+    border: solid white;
     height: 10%;
     width: 75%;
     margin: 10px;
@@ -115,7 +118,7 @@ h2 {
 .box {
     height: 30px;
     width: 30px;
-    border-style: solid;
+    border: solid white;
     border-width: 2px;
     margin-left: 10px;
     margin-right: 10px;
@@ -131,7 +134,7 @@ h2 {
     font-size: 20px;
     text-align: center;
     margin: 10px;
-    border-style: solid;
+    border: solid white;
 }
 
 .newflex{
@@ -157,7 +160,7 @@ input[type=button] {
 .armdrawing {
     width: 100%;
     height: 20px;
-    border-style: solid;
+    border: solid white;
 }
 
 .newgame {
@@ -185,7 +188,7 @@ input[type=button] {
 }
 
 .submission {
-    border: solid black;
+    border: dotted white;
     margin: 10px;
 }
 
