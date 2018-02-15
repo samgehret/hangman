@@ -14,8 +14,6 @@ var instructions = document.querySelector('.instructions')
 var winCount = 0
 var lossCount = 0
 
-// Could I give all the HTML Elements for ClearBoard the same
-// CSS class to only call this loop once with querySelectorAll
 function clearBoard () {
   while (tileBoard.hasChildNodes()) {
     tileBoard.removeChild(tileBoard.firstChild)
@@ -103,7 +101,6 @@ function checkLoss () {
 
 // define function to check the letter in the input box
 function checkLetter () {
-// ADD SOMETHIING FOR IF ENDMESSAGE HAS CHILD
   if (!endMessage.hasChildNodes()) {
     var checker = []
 // this for loop will take the value input in the box and compare to every word
@@ -143,17 +140,17 @@ submit.addEventListener('click', (e) => {
   checkLetter()
 })
 
-// event listener for enter key
+// event listener for enter key on form to guess letters
 form.addEventListener('keypress', (e) => {
   if (e.keyCode === 13) {
     checkLetter()
   }
 })
-
+// event listener for new game button
 startGameButton.addEventListener('click', (e) => {
   startNewGame()
 })
-
+// event listener for enter key on new game
 captureWord.addEventListener('keypress', (e) => {
   if (e.keyCode === 13) {
     startNewGame()
