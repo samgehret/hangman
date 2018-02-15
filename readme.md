@@ -5,9 +5,9 @@ This project is a simple game of standard hangman. The style is meant to replica
 
 ## CORE FEATURES/FUNCTIONALITY
 -The game takes the initial secret word input and parses it into an array.
--At the same time, it will create two blank arrays, the same length as the secret word.  
-    The first is to keep track of correct letter guesses  
-    The second is to keep track of incorrect letter guesses.  
+-At the same time, it will create two blank arrays, the same length as the secret word.    
+  * The first is to keep track of correct letter guesses.    
+  * The second is to keep track of incorrect letter guesses.  
 -Then the game board is created, with empty boxes created for each letter in the array for correcrt guesses.  
 -When the second user guesses a letter, it runs a for loop, using counter 'i' against the secret word array.  
     -If a match is found, it writes the guessed letter into the correct blank box using the index 'i' to select the correct blank box. It also writes the letter into an array for correct guessses to index 'i' of that array. This ensures the letters stored in the correct guesses array is in the correct order. It then checks for a win by comparing the correct guesses array to the secret word array.  
