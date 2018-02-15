@@ -89,7 +89,7 @@ function checkWin () {
 function checkLoss () {
   if (guessedWrongArray.length === 6) {
     winMessage.className = 'losing'
-    winMessage.innerHTML = `You Lose! Answer is ${wordArray.join('')} Start a new game above`
+    winMessage.innerHTML = `You Lose! Answer is '${wordArray.join('').toUpperCase()}.' Start a new game above`
     document.querySelector('.endmessage').appendChild(winMessage)
     document.querySelector('.submission').classList.remove('blinking')
     document.querySelector('.startanewgame').classList.add('blinking')
