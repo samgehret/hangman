@@ -35,6 +35,7 @@ function clearBoard () {
   while (instructions.hasChildNodes()) {
     instructions.removeChild(instructions.firstChild)
   }
+  document.querySelector('.head').innerHTML = ''
 }
 
 function checkInput () {
