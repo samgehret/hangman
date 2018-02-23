@@ -1,3 +1,8 @@
+// Great use of semantic variables and descriptive comments throughout your code
+// Neatly organizing your code by (1) variable definitions, (2) functions, (3) event listeners is a pro move!
+// You could further modularize your code by piecing more logic out of your longer functions into smaller functions
+// Further modularity allows for more semantic function naming and ultimately better readability
+
 // initialize global variables
 var wordArray = ''
 var submit = document.getElementById('submit')
@@ -23,6 +28,7 @@ function clearBoard () {
   }
 
   var hangMan = document.querySelector('.hangmanboard').children
+  // ^^ Define hangMan variable above with other variables, then call on the children of that variable here
   for (var k = 0; k < hangMan.length; k++) {
     hangMan[k].classList.add('hidden')
   }
@@ -54,11 +60,13 @@ function setBoard () {
     var box = document.createElement('div')
     box.className = `box box${i}`
     var letterBoard = document.querySelector('.tiles')
+    // ^^ You already defined this element as tileBoard at the top
     letterBoard.appendChild(box)
   }
   for (var j = 0; j < wordArray.length; j++) {
     guessedRightArray.push('')
   }
+  // ^^ Do you need this in a separate for loop, or could you include in the loop directly above it?
   document.querySelector('.submission').classList.add('blinking')
 }
 
@@ -103,10 +111,12 @@ function checkLoss () {
 function checkLetter () {
   if (!endMessage.hasChildNodes()) {
     var checker = []
+    // ^^ Define this variable above with the others!
 // this for loop will take the value input in the box and compare to every word
 // in the wordArray. If a match, it will store the letter in an array called checker
     for (var i = 0; i < wordArray.length; i++) {
       if (form.value === wordArray[i]) {
+        // ^^ Use more descriptive variable name than form - which form?
         var compareBox = document.querySelector('.box' + i)
         compareBox.innerHTML = form.value
         checker.push(form.value)

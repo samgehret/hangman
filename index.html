@@ -1,3 +1,5 @@
+<!-- great job using reusable class names like hidden and armdrawing to apply CSS rules to multiple HTMl elements -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +21,7 @@
         </ul>
     </div>
     <div class = 'newgame'>
+        <!-- You can put dashes between class names and ids that are multiple words to make them easier to read. -->
         <div class = 'startanewgame blinking'>
             <input type="text" maxlength="10" id='newword' placeholder = 'Enter your Word Here'>
             <input type="button" id = 'newgame' value = 'New Game'>
@@ -26,6 +29,7 @@
     </div>
     <div class = 'endmessage'></div>
     <div class = 'flex'>
+        <!-- use a name that better describes the content of the div, since you use flex on other elements too -->
         <div class = 'boardwins'>
             <div class = 'scorebox'>
                 <h3>Wins</h3>
@@ -38,7 +42,7 @@
                         <div class = 'armdrawing'></div>
                     </div>
                     <div class = 'rightarm index4 hidden'>
-                            <div class = 'armdrawing'></div>
+                        <div class = 'armdrawing'></div>
                     </div>
                     <div class = 'leftleg index5 hidden'></div>
                     <div class = 'rightleg index6 hidden'></div>   
@@ -48,12 +52,13 @@
                 <p id = 'losses'>0</p>
 
             </div>
-    </div>
+        </div>
         <div class = 'letterboard'>
             <div class = 'tiles'></div>
         </div>
    
         <div class = 'newflex'>
+         <!-- use a name that better describes the content of the div, since you use flex on other elements too -->
             <div class = 'bottomarea'>
                 <div class = 'guessedletters'>
                     
