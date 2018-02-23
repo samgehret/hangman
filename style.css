@@ -1,3 +1,5 @@
+/* You use a mix of fixed (px) and relative (%) units - conside using more relative measurements for consistency and a more responsive project. */
+
 body {
     background: black;
     color: white;
@@ -241,3 +243,4 @@ http://www.multipetros.gr/posts/728-blink-elements-border-the-css-way/ */
  .blinking { /*or other element you want*/
      animation: blink .5s step-end infinite alternate;
  }
+ /* cool tool - good find! */
